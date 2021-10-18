@@ -1,9 +1,6 @@
 import re
 from requests import get
 import os
-import aiohttp
-import asyncio
-import aiofiles
 from tqdm import tqdm
 from concurrent.futures.thread import ThreadPoolExecutor
 
@@ -73,12 +70,12 @@ def run(url, name, dist):
 
 def download(url,dist,cookie):
     bv = re.compile('BV..........').search(url).group()
-    cid, name = bili.get_cid(bv)
-    u_l = bili.get_list(bv, cid, cookie)
+    cid, name =get_cid(bv)
+    u_l = get_list(bv, cid, cookie)
     dist = "C:/project/python/bili_video/"
     with ThreadPoolExecutor(10) as t:
         for i in range(len(u_l)):
-            t.submit(bili.run,url=u_l[i],name=name[i],dist=dist)
+            t.submit(run,url=u_l[i],name=name[i],dist=dist)
 
 if __name__ == '__main__':
     url = 'https://www.bilibili.com/video/BV1Xq4y1d7Da/?spm_id_from=333.788.videocard.0'
