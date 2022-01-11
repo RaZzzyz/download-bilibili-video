@@ -78,6 +78,6 @@ def download(url,dist,cookie):
 
 if __name__ == '__main__':
     url = 'https://www.bilibili.com/video/BV1ob411q7vb?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click'
-    cookie = "b_ut=-1; _uuid=F48A4784-416C-413B-150F-336299E3BE0115321infoc; buvid3=456E3E85-9070-4F60-82AA-59A624D5804C148806infoc; fingerprint=5c79d66de68a6783450b1b5542696bce; buvid_fp=456E3E85-9070-4F60-82AA-59A624D5804C148806infoc; buvid_fp_plain=456E3E85-9070-4F60-82AA-59A624D5804C148806infoc; SESSDATA=adefcd9d%2C1649928729%2Caf6cc%2Aa1; bili_jct=80035fcc3760d4b02126929b79fa7b05; DedeUserID=8319923; DedeUserID__ckMd5=ed85c15e5de363e9; sid=i488bmh2; i-wanna-go-back=-1; blackside_state=1; rpdid=|(k|)lJlmRR~0J'uYJRJ~Y~mY; LIVE_BUVID=AUTO1716343772037931; bsource=search_baidu; CURRENT_QUALITY=80; CURRENT_BLACKGAP=1; CURRENT_FNVAL=976; _dfcaptcha=2b13aed12c68f681cc4ba68e54606131; innersign=1; PVID=10; bp_video_offset_8319923=582536666444361444; Hm_lvt_8a6e55dbd2870f0f5bc9194cddf32a02=1634395093,1634473220; Hm_lpvt_8a6e55dbd2870f0f5bc9194cddf32a02=1634473220"
+    cookie = cookie
     dist = "C:/project/python/studyVideo/C++/"
     download(url,dist,cookie)#此处可以再次套一层线程
